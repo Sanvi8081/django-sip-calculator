@@ -1,28 +1,40 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <title>SIP Calculator</title>
+
+    <link rel="stylesheet"
+          href="{% static 'calculator/css/style.css' %}">
+
 </head>
+
 <body>
+
+<div class="container">
 
     <h1>📈 SIP Calculator</h1>
 
-    <p>Welcome to my Django SIP Calculator.</p>
-
-    <hr>
-
     <form>
-        <label>Monthly Investment (₹)</label><br>
-        <input type="number"><br><br>
 
-        <label>Expected Annual Return (%)</label><br>
-        <input type="number"><br><br>
+        <label>Monthly Investment (₹)</label>
+        <input type="number">
 
-        <label>Investment Duration (Years)</label><br>
-        <input type="number"><br><br>
+        <label>Expected Annual Return (%)</label>
+        <input type="number">
 
-        <button type="submit">Calculate</button>
+        <label>Investment Duration (Years)</label>
+        <input type="number">
+
+        <button>Calculate</button>
+
     </form>
 
+</div>
+
 </body>
+
 </html>
