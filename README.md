@@ -114,16 +114,8 @@ This project was built to practice:
 ## 📸 Screenshots
 
 ### SIP Calculator
+<img width="1388" height="848" alt="Screenshot 2026-07-01 121900" src="https://github.com/user-attachments/assets/ba1b812c-912d-434b-8c0b-7653693ecbfa" />
 
-{% load static %}
-
-<p align="center">
-  <img src="{% static 'calculator/images/screenshot 1.png' %}" alt="SIP Calculator" width="800"/>
-</p>
-
-<p align="center">
-  <img src="{% static 'calculator/images/screenshot 2.png' %}" alt="SIP Calculator" width="800"/>
-</p>
 
 <img width="1502" height="756" alt="Screenshot 2026-07-01 121815" src="https://github.com/user-attachments/assets/9692fb47-9663-4835-a9b9-8a54aaa5448a" />
 
