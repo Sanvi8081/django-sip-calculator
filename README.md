@@ -2,7 +2,7 @@
 
 A simple SIP (Systematic Investment Plan) Calculator built using Django. This project was created to understand the fundamentals of Django, including URL routing, views, templates, static files, and handling user input through forms.
 
-## Features
+## ✨ Features
 
 - Calculate Total Investment
 - Calculate Estimated Returns
@@ -10,7 +10,7 @@ A simple SIP (Systematic Investment Plan) Calculator built using Django. This pr
 - Clean and responsive user interface
 - Built using Django templates and CSS
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 - Python
 - Django
@@ -43,7 +43,7 @@ django-sip-calculator/
 └── requirements.txt
 ```
 
-## How It Works
+## 🚀 How It Works
 
 1. The user enters:
    - Monthly Investment
@@ -111,5 +111,16 @@ This project was built to practice:
 - Static Files
 
 
+## 📸 Screenshots
 
+### SIP Calculator
 
+{% load static %}
+
+<p align="center">
+  <img src="{% static 'calculator/images/screenshot 1.png' %}" alt="SIP Calculator" width="800"/>
+</p>
+
+<p align="center">
+  <img src="{% static 'calculator/images/screenshot 2.png' %}" alt="SIP Calculator" width="800"/>
+</p>
