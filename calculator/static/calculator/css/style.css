@@ -1,336 +1,103 @@
-/* ===========================
-   GOOGLE FONT
-=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-/* ===========================
-   RESET
-=========================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F8F5F2;
+  color: #1A1A1A;
 }
 
-html{
-    scroll-behavior:smooth;
+.hero {
+  width: min(1200px, 90%);
+  margin: auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 80px;
+  align-items: center;
 }
 
-body{
-
-    font-family:'Inter',sans-serif;
-
-    background:
-    radial-gradient(circle at top left,#ffffff,#F7F8FA);
-
-    color:#111827;
-
+.badge {
+  background: #E7E0DB;
+  color: #3B3A3A;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-weight: 600;
 }
 
-/* ===========================
-   HERO
-=========================== */
-
-.hero{
-
-    width:min(1300px,90%);
-
-    margin:auto;
-
-    min-height:100vh;
-
-    display:grid;
-
-    grid-template-columns:1fr 500px;
-
-    gap:100px;
-
-    align-items:center;
-
+.left h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 72px;
+  color: #3B3A3A;
+  line-height: 1.1;
 }
 
-/* ===========================
-   LEFT
-=========================== */
-
-.badge{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    background:#fff;
-
-    border:1px solid #E5E7EB;
-
-    padding:10px 20px;
-
-    border-radius:50px;
-
-    color:#2563EB;
-
-    font-size:14px;
-
-    font-weight:600;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.04);
-
+.left p {
+  color: #6B5E55;
+  font-size: 20px;
+  line-height: 34px;
 }
 
-.left h1{
-
-    font-size:78px;
-
-    margin-top:30px;
-
-    line-height:82px;
-
-    letter-spacing:-4px;
-
-    font-weight:800;
-
+.card {
+  background: #FFFFFF;
+  border: 1px solid #E7E0DB;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 30px 60px rgba(59,58,58,0.08);
 }
 
-.left p{
-
-    margin-top:25px;
-
-    color:#6B7280;
-
-    font-size:21px;
-
-    line-height:38px;
-
-    max-width:470px;
-
+input {
+  border: 1px solid #D6CCC2;
+  background: #F8F5F2;
+  border-radius: 14px;
+  padding: 16px;
+  transition: 0.3s;
 }
 
-.features{
-
-    margin-top:50px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:22px;
-
+input:focus {
+  border-color: #6B5E55;
+  box-shadow: 0 0 0 4px rgba(107,94,85,0.15);
+  background: #FFFFFF;
 }
 
-.features div{
-
-    font-size:18px;
-
-    color:#374151;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:15px;
-
+button {
+  background: #3B3A3A;
+  color: #FFFFFF;
+  border-radius: 14px;
+  padding: 16px;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-.features span{
-
-    width:35px;
-
-    height:35px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    border-radius:50%;
-
-    background:#EEF4FF;
-
-    color:#2563EB;
-
+button:hover {
+  background: #6B5E55;
+  box-shadow: 0 10px 25px rgba(107,94,85,0.25);
+}
+/* Space out input fields and button */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* adds consistent spacing between inputs */
 }
 
-/* ===========================
-   CARD
-=========================== */
-
-.card{
-
-    background:rgba(255,255,255,.85);
-
-    backdrop-filter:blur(18px);
-
-    border:1px solid rgba(255,255,255,.6);
-
-    border-radius:28px;
-
-    padding:45px;
-
-    box-shadow:
-    0 40px 70px rgba(15,23,42,.08);
-
-    transition:.4s;
-
+/* Push the button slightly down */
+button {
+  margin-top: 32px; /* increases space above the button */
 }
 
-.card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:
-    0 60px 90px rgba(15,23,42,.12);
-
+/* Separate results from the form */
+.results {
+  margin-top: 50px; /* creates clear gap between form and results */
 }
 
-.card h2{
-
-    font-size:30px;
-
-    margin-bottom:40px;
-
+/* Add spacing between result cards */
+.result-card {
+  margin-bottom: 28px; /* separates each result visually */
 }
 
-/* ===========================
-   INPUTS
-=========================== */
-
-label{
-
-    display:block;
-
-    margin-bottom:10px;
-
-    margin-top:28px;
-
-    font-size:14px;
-
-    font-weight:600;
-
-    color:#374151;
-
-}
-
-input{
-
-    width:100%;
-
-    padding:18px;
-
-    border-radius:16px;
-
-    border:1px solid #E5E7EB;
-
-    background:#FCFCFD;
-
-    font-size:16px;
-
-    transition:.35s;
-
-    outline:none;
-
-}
-
-input::placeholder{
-
-    color:#9CA3AF;
-
-}
-
-input:focus{
-
-    border-color:#2563EB;
-
-    box-shadow:
-    0 0 0 5px rgba(37,99,235,.10);
-
-    background:white;
-
-}
-
-/* ===========================
-   BUTTON
-=========================== */
-
-button{
-
-    width:100%;
-
-    margin-top:35px;
-
-    padding:18px;
-
-    border:none;
-
-    border-radius:16px;
-
-    background:#111827;
-
-    color:white;
-
-    font-size:16px;
-
-    font-weight:600;
-
-    cursor:pointer;
-
-    transition:.35s;
-
-}
-
-button:hover{
-
-    background:#2563EB;
-
-    transform:translateY(-3px);
-
-    box-shadow:
-    0 20px 35px rgba(37,99,235,.28);
-
-}
-
-/* ===========================
-   RESPONSIVE
-=========================== */
-
-@media(max-width:1000px){
-
-.hero{
-
-grid-template-columns:1fr;
-
-padding:60px 0;
-
-}
-
-.left{
-
-text-align:center;
-
-}
-
-.left p{
-
-margin:auto;
-
-}
-
-.features{
-
-align-items:center;
-
-}
-
-.left h1{
-
-font-size:58px;
-
-line-height:62px;
-
-}
-
+/* Optional: make labels and inputs breathe more */
+label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #3B3A3A;
 }

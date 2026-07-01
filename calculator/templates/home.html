@@ -1,85 +1,81 @@
 {% load static %}
+{% load humanize %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIP Calculator</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>SIP Calculator</title>
-
-    <link rel="stylesheet" href="{% static 'calculator/css/style.css' %}">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'calculator/css/style.css' %}">
 </head>
 
 <body>
+  <main class="hero">
+    <!-- Left Section -->
+    <section class="left">
+      <span class="badge">Investment Planner</span>
+      <h1>SIP Calculator</h1>
+      <p>Invest smarter. Build wealth one month at a time.</p>
+      <ul class="features">
+        <li>✓ Compound Growth</li>
+        <li>✓ Smart Planning</li>
+        <li>✓ Instant Calculation</li>
+      </ul>
+    </section>
 
-<section class="hero">
+    <!-- Right Section -->
+    <section class="right">
+      <div class="card">
+        <h2>Calculate Returns</h2>
 
-    <div class="left">
+        <form method="POST" class="form-container">
+          {% csrf_token %}
+          <div class="input-group">
+            <label for="monthly_investment">Monthly Investment(Rupees)</label>
+            
+            <input type="number" id="monthly_investment" name="monthly_investment" placeholder="₹ 5000">
+          </div>
 
-        <span class="badge">
-            Investment Planner
-        </span>
+          <div class="input-group">
+            <label for="annual_return">Expected Annual Return (%)</label>
+            
+            <input type="number" id="annual_return" name="annual_return" placeholder="12 %">
+          </div>
 
-        <h1>
-            SIP <br> Calculator
-        </h1>
+          <div class="input-group">
+            <label for="years">Investment Duration (Years)</label>
+            
+            <input type="number" id="years" name="years" placeholder="10 Years">
+          </div>
 
-        <p>
-            Invest smarter.
-            Build wealth one month at a time.
-        </p>
+          
+          
+          <button type="submit">Calculate Returns →</button>
+        
+        </form>
 
-        <div class="features">
-
-            <div>✓ Compound Growth</div>
-
-            <div>✓ Smart Planning</div>
-
-            <div>✓ Instant Calculation</div>
-
+        
+        {% if maturity %}
+        <div class="results">
+          <div class="result-card">
+            <h3>Total Investment</h3>
+            <p>₹ {{ invested|intcomma }}</p>
+          </div>
+          <div class="result-card">
+            <h3>Estimated Returns</h3>
+            <p>₹ {{ returns|intcomma }}</p>
+          </div>
+          <div class="result-card">
+            <h3>Total Wealth</h3>
+            <p>₹ {{ maturity|intcomma }}</p>
+          </div>
         </div>
-
-    </div>
-
-    <div class="right">
-
-        <div class="card">
-
-            <h2>Calculate Returns</h2>
-
-            <form>
-
-                <label>Monthly Investment</label>
-
-                <input type="number" placeholder="₹ 5000">
-
-                <label>Expected Annual Return</label>
-
-                <input type="number" placeholder="12 %">
-
-                <label>Investment Duration</label>
-
-                <input type="number" placeholder="10 Years">
-
-                <button>
-
-                    Calculate Returns →
-
-                </button>
-
-            </form>
-
-        </div>
-
-    </div>
-
-</section>
-
+        {% endif %}
+      </div>
+    </section>
+  </main>
 </body>
-
 </html>
