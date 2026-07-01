@@ -1,39 +1,84 @@
 {% load static %}
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>SIP Calculator</title>
 
-    <link rel="stylesheet"
-          href="{% static 'calculator/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'calculator/css/style.css' %}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<div class="container">
+<section class="hero">
 
-    <h1>📈 SIP Calculator</h1>
+    <div class="left">
 
-    <form>
+        <span class="badge">
+            Investment Planner
+        </span>
 
-        <label>Monthly Investment (₹)</label>
-        <input type="number">
+        <h1>
+            SIP <br> Calculator
+        </h1>
 
-        <label>Expected Annual Return (%)</label>
-        <input type="number">
+        <p>
+            Invest smarter.
+            Build wealth one month at a time.
+        </p>
 
-        <label>Investment Duration (Years)</label>
-        <input type="number">
+        <div class="features">
 
-        <button>Calculate</button>
+            <div>✓ Compound Growth</div>
 
-    </form>
+            <div>✓ Smart Planning</div>
 
-</div>
+            <div>✓ Instant Calculation</div>
+
+        </div>
+
+    </div>
+
+    <div class="right">
+
+        <div class="card">
+
+            <h2>Calculate Returns</h2>
+
+            <form>
+
+                <label>Monthly Investment</label>
+
+                <input type="number" placeholder="₹ 5000">
+
+                <label>Expected Annual Return</label>
+
+                <input type="number" placeholder="12 %">
+
+                <label>Investment Duration</label>
+
+                <input type="number" placeholder="10 Years">
+
+                <button>
+
+                    Calculate Returns →
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
 
 </body>
 

@@ -1,55 +1,336 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    background: #f4f7fb;
+html{
+    scroll-behavior:smooth;
 }
 
-.container {
-    width: 420px;
-    margin: 60px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:
+    radial-gradient(circle at top left,#ffffff,#F7F8FA);
+
+    color:#111827;
+
 }
 
-h1 {
-    text-align: center;
-    color: #2563eb;
-    margin-bottom: 25px;
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    width:min(1300px,90%);
+
+    margin:auto;
+
+    min-height:100vh;
+
+    display:grid;
+
+    grid-template-columns:1fr 500px;
+
+    gap:100px;
+
+    align-items:center;
+
 }
 
-label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
+/* ===========================
+   LEFT
+=========================== */
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#fff;
+
+    border:1px solid #E5E7EB;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    color:#2563EB;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.04);
+
 }
 
-input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 8px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+.left h1{
+
+    font-size:78px;
+
+    margin-top:30px;
+
+    line-height:82px;
+
+    letter-spacing:-4px;
+
+    font-weight:800;
+
 }
 
-button {
-    width: 100%;
-    margin-top: 25px;
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    background: #2563eb;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+.left p{
+
+    margin-top:25px;
+
+    color:#6B7280;
+
+    font-size:21px;
+
+    line-height:38px;
+
+    max-width:470px;
+
 }
 
-button:hover {
-    background: #1d4ed8;
+.features{
+
+    margin-top:50px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+.features div{
+
+    font-size:18px;
+
+    color:#374151;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.features span{
+
+    width:35px;
+
+    height:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#EEF4FF;
+
+    color:#2563EB;
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.card{
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.6);
+
+    border-radius:28px;
+
+    padding:45px;
+
+    box-shadow:
+    0 40px 70px rgba(15,23,42,.08);
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 60px 90px rgba(15,23,42,.12);
+
+}
+
+.card h2{
+
+    font-size:30px;
+
+    margin-bottom:40px;
+
+}
+
+/* ===========================
+   INPUTS
+=========================== */
+
+label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    margin-top:28px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#374151;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    border:1px solid #E5E7EB;
+
+    background:#FCFCFD;
+
+    font-size:16px;
+
+    transition:.35s;
+
+    outline:none;
+
+}
+
+input::placeholder{
+
+    color:#9CA3AF;
+
+}
+
+input:focus{
+
+    border-color:#2563EB;
+
+    box-shadow:
+    0 0 0 5px rgba(37,99,235,.10);
+
+    background:white;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+button{
+
+    width:100%;
+
+    margin-top:35px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#111827;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+button:hover{
+
+    background:#2563EB;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 20px 35px rgba(37,99,235,.28);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1000px){
+
+.hero{
+
+grid-template-columns:1fr;
+
+padding:60px 0;
+
+}
+
+.left{
+
+text-align:center;
+
+}
+
+.left p{
+
+margin:auto;
+
+}
+
+.features{
+
+align-items:center;
+
+}
+
+.left h1{
+
+font-size:58px;
+
+line-height:62px;
+
+}
+
 }
